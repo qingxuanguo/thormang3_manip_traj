@@ -1,0 +1,15 @@
+clear; close all; clc; 
+x_ini=0.5;
+y_ini=0.5;
+z_ini=0.9;
+x_end=0.6;
+y_end=0.2;
+z_end=0.78;
+p_ini=1;
+r_ini=1;
+ya_ini=1;
+Traj=thormang3_manip_traj(x_ini, y_ini, z_ini, p_ini, r_ini, ya_ini, x_end, y_end, z_end);
+plot3(Traj(:,2),Traj(:,3),Traj(:,4));
+hold on;grid on;
+plot3(x_ini, y_ini, z_ini,'o','Color','r');
+plot3(x_end, y_end, z_end,'o','Color','r');
